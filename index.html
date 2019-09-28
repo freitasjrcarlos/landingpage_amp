@@ -99,6 +99,51 @@
         color: #000000;
         margin: 20px auto;
       }
+
+      .novos {
+        background: #f3f3f3;
+        flex-direction: column;
+      }
+
+      .novos h2{
+        padding: 40px 0 30px 140px;
+        text-transform: uppercase;
+      }
+
+      .novos-container {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+      }
+
+      .miniatura {
+        display: flex;
+        flex-direction: column;
+        background: #ffffff;
+        border: 1px solid #dcdcdc;
+        width: 250px;
+        height: 150px;
+        margin: 10px;
+        transition: .5s;
+      }
+
+      .miniatura:hover {
+        border: 1px solid #000000;
+        transition: .2s;
+      }
+
+      .center {
+        margin: 0 auto;
+      }
+
+      .miniatura h3 {
+        margin: 10px auto;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
       
     </style>
   </head>
@@ -127,8 +172,8 @@
     
             <select name="unidade">
               <option value="default" disabled selected>Loja</option>
-              <option value="palio">Gravataí</option>
-              <option value="siena">Florianópolis</option>
+              <option value="gravatai">Gravataí</option>
+              <option value="florianopolis">Florianópolis</option>
             </select>
     
             <input type="text" name="cidade" placeholder="Cidade" required>
@@ -150,7 +195,97 @@
         
       </form>
     </div>
-    <section class="container">
+    <section class="container novos">
+      <h2> Novos </h2>
+      <div class="novos-container">
+        <a href="">
+          <div class="miniatura">
+            <amp-img src="assets/images/miniatura.png" alt="Welcome" height="100" width="150" class="center"></amp-img>
+            <h3>Grand Siena</h3>
+          </div>
+        </a>
+        
+        <a href="">
+          <div class="miniatura">
+            <amp-img src="assets/images/miniatura.png" alt="Welcome" height="100" width="150" class="center"></amp-img>
+            <h3>Grand Siena</h3>
+          </div>
+        </a>
+
+        <a href="">
+          <div class="miniatura">
+            <amp-img src="assets/images/miniatura.png" alt="Welcome" height="100" width="150" class="center"></amp-img>
+            <h3>Grand Siena</h3>
+          </div>
+        </a>
+
+        <a href="">
+          <div class="miniatura">
+            <amp-img src="assets/images/miniatura.png" alt="Welcome" height="100" width="150" class="center"></amp-img>
+            <h3>Grand Siena</h3>
+          </div>
+        </a>
+      </div>
+
+      <div class="novos-container">
+          <a href="">
+            <div class="miniatura">
+              <amp-img src="assets/images/miniatura.png" alt="Welcome" height="100" width="150" class="center"></amp-img>
+              <h3>Grand Siena</h3>
+            </div>
+          </a>
+          
+          <a href="">
+            <div class="miniatura">
+              <amp-img src="assets/images/miniatura.png" alt="Welcome" height="100" width="150" class="center"></amp-img>
+              <h3>Grand Siena</h3>
+            </div>
+          </a>
+  
+          <a href="">
+            <div class="miniatura">
+              <amp-img src="assets/images/miniatura.png" alt="Welcome" height="100" width="150" class="center"></amp-img>
+              <h3>Grand Siena</h3>
+            </div>
+          </a>
+  
+          <a href="">
+            <div class="miniatura">
+              <amp-img src="assets/images/miniatura.png" alt="Welcome" height="100" width="150" class="center"></amp-img>
+              <h3>Grand Siena</h3>
+            </div>
+          </a>
+        </div>
+
+        <div class="novos-container">
+            <a href="">
+              <div class="miniatura">
+                <amp-img src="assets/images/miniatura.png" alt="Welcome" height="100" width="150" class="center"></amp-img>
+                <h3>Grand Siena</h3>
+              </div>
+            </a>
+            
+            <a href="">
+              <div class="miniatura">
+                <amp-img src="assets/images/miniatura.png" alt="Welcome" height="100" width="150" class="center"></amp-img>
+                <h3>Grand Siena</h3>
+              </div>
+            </a>
+    
+            <a href="">
+              <div class="miniatura">
+                <amp-img src="assets/images/miniatura.png" alt="Welcome" height="100" width="150" class="center"></amp-img>
+                <h3>Grand Siena</h3>
+              </div>
+            </a>
+    
+            <a href="">
+              <div class="miniatura">
+                <amp-img src="assets/images/miniatura.png" alt="Welcome" height="100" width="150" class="center"></amp-img>
+                <h3>Grand Siena</h3>
+              </div>
+            </a>
+          </div>
 
     </section>
     
