@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
+    <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
+
     <title>Fiat</title>
     <link rel="canonical" href="https://amp.dev/pt_br/documentation/guides-and-tutorials/start/create/basic_markup/">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
@@ -27,7 +30,7 @@
       header{
         display: flex;
         justify-content: space-between;
-        margin: 20px 50px 20px 50px;
+        margin: 20px 100px 20px 100px;
       }
       .container {
         display: flex;
@@ -37,7 +40,66 @@
         background: url('assets/images/banner.jpg') no-repeat center;
         background-size: cover;
         height: 500px;
+        justify-content: flex-end;
       }
+      .formulario {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        background: rgba(0, 0, 0, .5);
+        margin: 0 100px 0 0;
+      }
+      .banner .itens {
+        margin: 0 auto;
+        justify-content: center;
+        text-align: center;
+      }
+      .banner h2{
+        color: #fefefe;
+        text-transform: uppercase;
+        font-size: 15px;
+        margin: 20px 0;
+      }
+      .banner input {
+        width: 200px;        
+        padding: 10px;
+        margin: 5px 0;
+        color: #848484;
+      }
+      .banner select {
+        width: 220px;
+        padding: 10px 0;
+        margin: 5px 0;
+        color: #848484;
+      }
+      .banner textarea {
+        width: 200px;
+        padding: 10px;
+        margin: 5px 0;
+        color: #848484;
+      }
+      .banner .btn {
+        background: #9B3045;
+        color: #ffffff;
+        text-transform: uppercase;
+        width: 100px;
+        border: none;
+        cursor: pointer;
+        transition: 0.5s;
+        font-weight: bold;
+      }
+      .banner .btn:hover {
+        background: #ffffff;
+        color: #9B3045;
+        transition: 0.5s;
+      }
+      .banner .aviso-form{
+        width: 200px;
+        background: #ffffff;
+        color: #000000;
+        margin: 20px auto;
+      }
+      
     </style>
   </head>
   <body>
@@ -48,7 +110,45 @@
     </header>
 
     <div class="banner">
-
+      <!-- Form -->
+      <form class="formulario" method="post" action-xhr="/documentation/examples/api/submit-form-input-text-xhr" target="_top">
+        <div class="itens">
+            <h2>Cotação</h2>
+            <input type="text" name="nome" placeholder="Nome" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="tel" name="telefone" placeholder="Telefone" required>
+    
+            <select name="modelo">
+              <option value="default" disabled selected>Modelo</option>
+              <option value="palio">Palio</option>
+              <option value="siena">Siena</option>
+              <option value="siena">Gran Siena</option>
+            </select>
+    
+            <select name="unidade">
+              <option value="default" disabled selected>Loja</option>
+              <option value="palio">Gravataí</option>
+              <option value="siena">Florianópolis</option>
+            </select>
+    
+            <input type="text" name="cidade" placeholder="Cidade" required>
+            <textarea name="mensagem" placeholder="Mensagem" rows="4"></textarea>
+            <input type="submit" value="Enviar" class="btn">
+    
+            <div submit-success class="aviso-form">
+              <template type="amp-mustache">
+                Enviado com sucesso!
+              </template>
+            </div>
+    
+            <div submit-error class="aviso-form">
+              <template type="amp-mustache">
+                Erro!
+              </template>
+            </div>
+        </div>
+        
+      </form>
     </div>
     <section class="container">
 
