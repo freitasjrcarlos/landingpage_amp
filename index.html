@@ -3,8 +3,11 @@
   <head>
     <meta charset="utf-8">
     <script async src="https://cdn.ampproject.org/v0.js"></script>
+
+    <!-- Elementos -->
     <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
     <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
+    <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
 
     <title>Fiat</title>
     <link rel="canonical" href="https://amp.dev/pt_br/documentation/guides-and-tutorials/start/create/basic_markup/">
@@ -24,13 +27,14 @@
 
     <style amp-custom>
       /* any custom style goes here */
-      body {
-        background-color: white;
+      body {        
+        background: #ffffff;
       }
       header{
         display: flex;
         justify-content: space-between;
         margin: 20px 100px 20px 100px;
+        background: #ffffff;
       }
       .container {
         display: flex;
@@ -101,8 +105,8 @@
       }
 
       .novos {
+        flex-direction: column;        
         background: #f3f3f3;
-        flex-direction: column;
       }
 
       .novos h2{
@@ -144,7 +148,57 @@
         text-decoration: none;
         color: inherit;
       }
-      
+
+      .location {
+        padding-top: 40px;        
+        background: #f3f3f3;
+        position: relative;
+        
+      }
+      .mapa {
+        position: absolute;
+        width: 100%;
+        height: 350px;
+      }
+      .lojas {
+        display: block;
+        position: absolute;
+        z-index: 10px;
+        background: #ffffff;
+        width: 250px;
+        border-radius: 10px;
+        padding: 10px 10px 10px 30px;
+        margin: 30px 0 0 150px; 
+      }
+      .lojas h4 {
+        font-size: 25px;
+        text-transform: uppercase;
+      }
+      .lojas hr {
+        width: 220px;
+        height: 1px;
+        background: #dcdcdc;
+        border: none;
+        margin: 10px 0;
+        padding: 0;
+      }
+
+      .lojas h5, .lojas span {
+        margin: 0;
+        padding: 5px 0;
+      }
+      .lojas span {
+        font-size: 12px;
+      }
+
+      .lojas-item {
+        width: 100px;
+        transition: .2s;
+      }
+      .loja-item:hover {
+        border-right: 4px solid red;
+        transition: .2s;
+      }
     </style>
   </head>
   <body>
@@ -171,9 +225,9 @@
             </select>
     
             <select name="unidade">
-              <option value="default" disabled selected>Loja</option>
-              <option value="gravatai">Gravataí</option>
+              <option value="default" disabled selected>Loja</option>              
               <option value="florianopolis">Florianópolis</option>
+              <option value="gravatai">Gravataí</option>
             </select>
     
             <input type="text" name="cidade" placeholder="Cidade" required>
@@ -289,5 +343,32 @@
 
     </section>
     
+    <div class="location">
+      <div class="mapa">
+        <amp-iframe  height="350" sandbox="allow-scripts allow-same-origin" layout="fixed-height"  frameborder="0"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7073.031364987821!2d-48.51406662065205!3d-27.5775375996417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xcc4df12e353a346e!2sPrima%20Fiat!5e0!3m2!1spt-BR!2sbr!4v1569693719921!5m2!1spt-BR!2sbr">
+        </amp-iframe>
+      </div><!-- /mapa -->
+      <div class="lojas">
+          <h4>Onde estamos</h4>
+          <hr>        
+        
+        <div class="loja-item">
+          <a href="">
+            <span>Florianópolis</span>
+            <h5>Rod. Admar Gonzaga, 435 - Itacorubi</h5>
+            <h5>48 - 99999.9999</h5>
+          </a>
+        </div>
+        <hr>
+        <div class="loja-item">
+          <a href="">
+            <span>Gravataí</span>
+            <h5>Avenida Dorival C. de Oliveira - 120</h5>
+            <h5>51 - 99999.9999</h5>
+          </a>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
