@@ -36,6 +36,35 @@
         margin: 20px 100px 20px 100px;
         background: #ffffff;
       }
+
+      .header-item {
+        margin-top: 20px;
+      }
+
+      .header-item:nth-child(3){
+        margin-top: 0px
+      }
+
+      .header-item:nth-child(3) span{
+        font-size: 12px;
+        padding: 15px 0 0 0;
+        margin: 0;
+      }
+      .header-item:nth-child(3) h5{
+        font-size: 22px;
+        padding: 0 0 0 0;
+        margin: 0;
+      }
+
+      .header-item:nth-child(3){
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 250px;
+        height: 70px;
+        border: 1px solid #808080;
+        border-bottom: 3px solid #9B3045;
+      }
       .container {
         display: flex;
       }
@@ -193,19 +222,68 @@
 
       .lojas-item {
         width: 100px;
-        transition: .2s;
       }
       .loja-item:hover {
-        border-right: 4px solid red;
-        transition: .2s;
+        border-right: 4px solid #9B3045;
+      }
+
+      footer {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 100px;
+        height: 130px;        
+        margin-top: 350px;
+        background: #dcdcdc;
+      }
+
+      .footer-item{
+        margin: 30px 0 0 0;
+      }
+
+      .footer-item:nth-child(2){
+        margin-top: 50px;
+      }
+
+      .footer-item:nth-child(3){
+        padding-top: 10px;
+      }
+
+      .footer-item:nth-child(3) span{
+        font-size: 12px;
+        padding: 15px 0 0 0;
+        margin: 0;
+      }
+      .footer-item:nth-child(3) h5{
+        font-size: 22px;
+        padding: 0 0 0 0;
+        margin: 0;
+      }
+
+      .footer-item:nth-child(3){
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 250px;
+        height: 70px;
+        border: 1px solid #808080;
+        border-bottom: 3px solid #9B3045;
       }
     </style>
   </head>
   <body>
     <header>
-        <amp-img src="assets/images/logo.png" alt="Welcome" height="50" width="150"></amp-img>
-        <amp-img src="assets/images/btnWhats.png" alt="Welcome" height="50" width="200"></amp-img>
-        <amp-img src="assets/images/logo.png" alt="Welcome" height="50" width="150"></amp-img>
+      <div class="header-item">
+          <amp-img src="assets/images/logo.png" alt="Welcome" height="50" width="150"></amp-img>
+      </div>
+
+      <div class="header-item">
+          <amp-img src="assets/images/btnWhats.png" alt="Welcome" height="50" width="200"></amp-img>
+      </div>        
+        
+        <div class="header-item">
+            <span>Florianópolis</span>
+            <h5>48 - 99999.9999</h5>
+        </div>
     </header>
 
     <div class="banner">
@@ -370,5 +448,20 @@
         </div>
       </div>
     </div>
+
+    <footer>
+      <div class="footer-item">
+          <amp-img src="assets/images/logo2.png" alt="Welcome" height="85" width="85"></amp-img>
+      </div>
+      
+      <div class="footer-item">
+        <h5>Carlos Freitas</h5>
+      </div>
+
+      <div class="footer-item">
+          <span>Florianópolis</span>
+          <h5>48 - 99999.9999</h5>
+      </div>
+    </footer>
   </body>
 </html>
