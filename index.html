@@ -272,6 +272,54 @@
         border: 1px solid #808080;
         border-bottom: 3px solid #9B3045;
       }
+
+      @media(max-width: 992px){
+        header {
+          flex-direction: column;
+          justify-content: center;
+          text-align: center;
+          margin: 0 auto;
+        }
+        .header-item {
+          margin: 10px auto;
+        }
+        .formulario{
+          margin: 0 auto;
+        }
+        .novos-container {
+          flex-direction: column;
+        }
+
+        .location {
+          max-width: 100%;
+        }
+        .lojas {
+          margin: 0 auto;
+        }
+
+        footer {
+          flex-direction: column;
+          height: 100%;
+        }
+        .footer-item {
+          margin: 0 auto;
+        }
+
+        .footer-item:nth-child(1){
+          margin-top: 50px;
+          margin-bottom: 0px;
+          padding: 0;
+        }
+
+        .footer-item:nth-child(2){
+          margin: 20px auto;
+        }
+
+        .footer-item:nth-child(3){
+          margin-bottom: 20px;
+          width: 100%;
+        }
+      }
     </style>
   </head>
   <body>
